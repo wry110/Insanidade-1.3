@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8b5cf6; /* Roxo (violet-500) */
+  --primary-dark: #7c3aed; /* Roxo escuro (violet-600) */
+  --primary-light: #a78bfa; /* Roxo claro (violet-400) */
+  --primary-hover: #6d28d9; /* Roxo mais escuro para hover (violet-700) */
+  --primary-focus: #4c1d95; /* Roxo muito escuro para focus (violet-900) */
+  --background: #1e1e1e;
+  --foreground: #f8f8f8;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-danger {
+    @apply bg-violet-800 hover:bg-violet-900 text-white px-4 py-2 rounded-md transition-colors;
+  }
+
+  .input-primary {
+    @apply bg-gray-800 border border-gray-700 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 text-white rounded-md px-3 py-2 outline-none;
+  }
+
+  .card {
+    @apply bg-gray-800 rounded-lg shadow-lg p-4 border border-gray-700;
+  }
+
+  .card-header {
+    @apply text-xl font-bold text-violet-400 mb-4 pb-2 border-b border-gray-700;
+  }
+
+  .tab-active {
+    @apply bg-violet-700 text-white;
+  }
+
+  .tab-inactive {
+    @apply bg-gray-700 text-gray-300 hover:bg-gray-600;
+  }
+}
